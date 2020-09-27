@@ -72,4 +72,13 @@ public class TestController {
         test.setName("test");
         testService.save(test);
     }
+
+    @ApiOperation(value = "测试sql where条件中in的数据大的情况", notes = "测试sql where条件中in的数据大的情况")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "成功", response = String.class),
+            @ApiResponse(code = 500, message = "失败", response = String.class)})
+    @GetMapping("/insert")
+    public String getData(){
+        return idTestService.testInMuch();
+    }
 }
