@@ -1,3 +1,6 @@
+log:
+  url: /log
+
 spring:
   datasource:
     url: jdbc:p6spy:mysql://127.0.0.1:3306/demo?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowMultiQueries=true
@@ -23,6 +26,6 @@ mybatis-plus:
     map-underscore-to-camel-case: false
   global-config:
     db-config:
-      id-type: uuid
+      id-type: ID_WORKER
       # 第二种方法，在配置文件里设置update时的字段策略，这里选择ignored，即忽略检测null字段，即可进行全字段更新
 #      update-strategy: ignored
